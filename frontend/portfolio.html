@@ -74,40 +74,28 @@
         }
         
         .hero {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(135deg, #000000 0%, #330000 100%);
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #ff0000, #000000);
             color: white;
-            margin-bottom: 60px;
-            border: 1px solid #ff0000;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
         
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: #ff0000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: #ff0000;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255,0,0,0.3);
+        .section {
+            padding: 80px 0;
         }
         
         .section-title {
@@ -116,31 +104,46 @@
             color: #ff0000;
         }
         
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #ff0000;
+        }
+        
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
-            margin-bottom: 60px;
         }
         
         .portfolio-item {
-            background: #111;
-            border-radius: 8px;
+            background-color: #000;
+            border: 1px solid #ff0000;
+            border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(255,0,0,0.2);
             transition: transform 0.3s;
-            border: 1px solid #333;
         }
         
         .portfolio-item:hover {
             transform: translateY(-10px);
-            border-color: #ff0000;
+            border-color: #fff;
         }
         
         .portfolio-img {
-            width: 100%;
             height: 250px;
-            background-color: #222;
+            background-color: #333;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -156,78 +159,73 @@
             color: #ff0000;
         }
         
-        .portfolio-info p {
-            color: #ccc;
-        }
-        
         footer {
             background-color: #000;
             color: white;
             padding: 40px 0 20px;
-            margin-top: 60px;
             border-top: 1px solid #ff0000;
         }
         
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
             margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
         }
         
         .footer-section h3 {
             margin-bottom: 20px;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             color: #ff0000;
         }
         
         .footer-section p {
             margin-bottom: 10px;
-            color: #ccc;
         }
         
         .social-links {
             display: flex;
-            gap: 15px;
-            margin-top: 15px;
+            list-style: none;
+        }
+        
+        .social-links li {
+            margin-right: 15px;
         }
         
         .social-links a {
             color: #ff0000;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
         }
         
-        .copyright {
+        .social-links a:hover {
+            color: #fff;
+        }
+        
+        .footer-bottom {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid #333;
-            color: #aaa;
-            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,0,0,0.3);
         }
         
         @media (max-width: 768px) {
             .nav-links {
                 flex-direction: column;
-                background: #111;
-                position: absolute;
-                top: 100%;
-                right: 0;
-                width: 200px;
-                box-shadow: 0 5px 10px rgba(255,0,0,0.3);
-                padding: 20px;
-                display: none;
-            }
-            
-            .nav-links.active {
-                display: flex;
+                align-items: flex-end;
             }
             
             .nav-links li {
-                margin: 10px 0;
+                margin: 5px 0;
             }
             
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
         }
     </style>
@@ -236,7 +234,7 @@
     <header>
         <div class="container">
             <nav>
-                <a href="/" class="logo">DesignStudio</a>
+                <a href="/" class="logo">DesignPortfolio</a>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio" class="active">Portfolio</a></li>
@@ -247,101 +245,89 @@
     </header>
 
     <section class="hero">
-        <div class="container">
+        <div class="hero-content">
             <h1>My Portfolio</h1>
-            <p>Explore my collection of design projects showcasing creativity, attention to detail, and effective visual communication across various mediums and industries.</p>
+            <p>A showcase of my latest design projects</p>
         </div>
     </section>
 
-    <main>
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">Design Projects</h2>
+            <div class="section-title">
+                <h2>Design Projects</h2>
+            </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-img">Project Image 1</div>
                     <div class="portfolio-info">
                         <h3>Brand Identity</h3>
-                        <p>Complete brand identity design for tech startup</p>
+                        <p>Complete branding solution for tech startup</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-img">Project Image 2</div>
                     <div class="portfolio-info">
                         <h3>Packaging Design</h3>
-                        <p>Eco-friendly packaging solution for organic products</p>
+                        <p>Eco-friendly packaging for organic products</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-img">Project Image 3</div>
                     <div class="portfolio-info">
-                        <h3>Web Design</h3>
-                        <p>Modern website design for creative agency</p>
+                        <h3>Web Illustrations</h3>
+                        <p>Custom illustrations for SaaS platform</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-img">Project Image 4</div>
                     <div class="portfolio-info">
-                        <h3>Illustration Series</h3>
-                        <p>Set of editorial illustrations for magazine feature</p>
+                        <h3>Mobile App UI</h3>
+                        <p>User interface design for fitness application</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-img">Project Image 5</div>
                     <div class="portfolio-info">
-                        <h3>Mobile App UI</h3>
-                        <p>User interface design for fitness tracking application</p>
+                        <h3>Magazine Layout</h3>
+                        <p>Editorial design for lifestyle publication</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-img">Project Image 6</div>
                     <div class="portfolio-info">
-                        <h3>Print Campaign</h3>
-                        <p>Advertising campaign for cultural event</p>
+                        <h3>Logo Design</h3>
+                        <p>Minimalist logo for consulting firm</p>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>DesignStudio</h3>
-                    <p>Creating meaningful visual experiences that connect brands with their audiences through innovative design solutions.</p>
+                    <h3>DesignPortfolio</h3>
+                    <p>Creating impactful visual experiences that connect brands with their audiences through thoughtful design.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <p>Email: hello@designstudio.com</p>
+                    <p>Email: hello@designportfolio.com</p>
                     <p>Phone: +1 (555) 123-4567</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Follow Me</h3>
-                    <div class="social-links">
-                        <a href="#">Instagram</a>
-                        <a href="#">Behance</a>
-                        <a href="#">Dribbble</a>
-                    </div>
-                </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 DesignStudio. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DesignPortfolio. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Mobile menu toggle functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelector('.nav-links');
-            
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!event.target.closest('nav')) {
-                    navLinks.classList.remove('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
