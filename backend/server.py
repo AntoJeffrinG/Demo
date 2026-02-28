@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 FRONTEND_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'frontend')
-
+ 
 @app.route('/')
 def index():
     return send_from_directory(FRONTEND_DIR, 'index.html')
