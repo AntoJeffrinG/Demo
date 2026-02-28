@@ -16,7 +16,7 @@ def serve_static(filename):
     file_path = os.path.join(FRONTEND_DIR, filename)
     if os.path.exists(file_path):
         return send_from_directory(FRONTEND_DIR, filename)
-    
+     
     html_file_path = os.path.join(FRONTEND_DIR, filename + '.html')
     if os.path.exists(html_file_path):
         return send_from_directory(FRONTEND_DIR, filename + '.html')
