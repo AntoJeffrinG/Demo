@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  .hero__title {
+    font-size: var(--font-size-1);
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .story__highlight {
+    color: #818CF8;
+    font-weight: 600;
+  }
+
+  .team__member-card:hover {
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+  }
+
+  .team__social-link {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+  }
+
+  .team__social-link:hover {
+    color: #818CF8;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="section" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);">
+  <div class="container">
+    <div class="hero__title text-center mx-auto" style="max-width: 800px;">
+      <h1 class="heading-1 gradient-text">Our Story</h1>
+      <p class="body-lg mt-4">Passionate creators driving digital transformation</p>
+      <div class="gap-4 mt-6 flex justify-center">
+        <a href="#team" class="btn btn-primary">Meet the Team</a>
+        <a href="#values" class="btn btn-secondary">Our Values</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Story Section -->
+<section id="story" class="section">
+  <div class="container">
+    <div class="section-header text-center mb-12">
+      <h2 class="heading-2">Who We Are</h2>
+      <p class="body-lg mt-4">A team of passionate creators shaping the future of digital experiences</p>
+    </div>
+
+    <div class="grid-2 gap-12 items-center">
+      <div>
+        <p class="body-lg"><span class="story__highlight">Founded in 2018</span>, we began as a small group of designers and developers united by a shared vision: to transform how businesses connect with their audiences through technology.</p>
+        <p class="body-base mt-6">Over the years, we’ve grown into a diverse team of strategists, engineers, and creatives who believe in the power of innovation to solve real-world problems.</p>
+        <p class="body-base mt-4">Our journey has been fueled by collaboration, curiosity, and a relentless pursuit of excellence — values that continue to define who we are today.</p>
+      </div>
+      <figure>
+        <img src="https://placehold.co/800x500/181824/818CF8?text=Our+Journey" alt="Our Journey" class="w-full rounded-lg overflow-hidden shimmer">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="section-sm">
+  <div class="container">
+    <div class="section-header text-center mb-12">
+      <h2 class="heading-2">Meet the Team</h2>
+      <p class="body-lg mt-4">The talented individuals behind our success</p>
+    </div>
+
+    <div class="grid-3 gap-8">
+      <!-- Team Member 1 -->
+      <div class="card team__member-card">
+        <figure class="mb-4">
+          <img src="https://placehold.co/300x300/181824/94A3B8?text=Alex+Morgan" alt="Alex Morgan" class="w-full rounded-lg overflow-hidden">
+        </figure>
+        <h3 class="heading-4 mt-2">Alex Morgan</h3>
+        <p class="body-base text-muted">Co-Founder & Lead Developer</p>
+        <div class="flex gap-3 mt-4">
+          <a href="#" class="team__social-link"><i class="fa-brands fa-github fa-lg"></i></a>
+          <a href="#" class="team__social-link"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+          <a href="#" class="team__social-link"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="card team__member-card">
+        <figure class="mb-4">
+          <img src="https://placehold.co/300x300/181824/94A3B8?text=Jamie+Lee" alt="Jamie Lee" class="w-full rounded-lg overflow-hidden">
+        </figure>
+        <h3 class="heading-4 mt-2">Jamie Lee</h3>
+        <p class="body-base text-muted">Design Director</p>
+        <div class="flex gap-3 mt-4">
+          <a href="#" class="team__social-link"><i class="fa-brands fa-dribbble fa-lg"></i></a>
+          <a href="#" class="team__social-link"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+          <a href="#" class="team__social-link"><i class="fa-brands fa-behance fa-lg"></i></a>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="card team__member-card">
+        <figure class="mb-4">
+          <img src="https://placehold.co/300x300/181824/94A3B8?text=Riley+Kim" alt="Riley Kim" class="w-full rounded-lg overflow-hidden">
+        </figure>
+        <h3 class="heading-4 mt-2">Riley Kim</h3>
+        <p class="body-base text-muted">Product Strategist</p>
+        <div class="flex gap-3 mt-4">
+          <a href="#" class="team__social-link"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+          <a href="#" class="team__social-link"><i class="fa-solid fa-envelope fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section id="values" class="section-sm bg-dark-light">
+  <div class="container">
+    <div class="section-header text-center mb-12">
+      <h2 class="heading-2">Our Core Values</h2>
+      <p class="body-lg mt-4">Principles that guide everything we do</p>
+    </div>
+
+    <div class="grid-3 gap-8">
+      <div class="card-glass p-6">
+        <i class="fa-solid fa-star text-accent fa-2x mb-4"></i>
+        <h3 class="heading-4">Excellence</h3>
+        <p class="body-base mt-2">We strive for the highest standards in every project, ensuring quality and innovation in all we create.</p>
+      </div>
+
+      <div class="card-glass p-6">
+        <i class="fa-solid fa-users text-accent fa-2x mb-4"></i>
+        <h3 class="heading-4">Collaboration</h3>
+        <p class="body-base mt-2">We believe in the power of teamwork and diverse perspectives to build better solutions.</p>
+      </div>
+
+      <div class="card-glass p-6">
+        <i class="fa-solid fa-rocket text-accent fa-2x mb-4"></i>
+        <h3 class="heading-4">Innovation</h3>
+        <p class="body-base mt-2">We push boundaries and embrace new technologies to stay ahead in a fast-evolving landscape.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
