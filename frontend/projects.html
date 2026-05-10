@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  .hero__title {
+    font-size: var(--font-size-1);
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .project__card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .project__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="section" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);">
+  <div class="container">
+    <div class="hero__title text-center">
+      <h1 class="heading-1 gradient-text">Our Portfolio</h1>
+      <p class="body-lg mt-4">Showcasing innovative solutions across industries</p>
+      <div class="gap-4 mt-6">
+        <a href="/projects" class="btn btn-primary">View Case Study</a>
+        <a href="/projects" class="btn btn-ghost">See All Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="section-sm">
+  <div class="container">
+    <div class="section-header text-center mb-12">
+      <h2 class="heading-2">Featured Projects</h2>
+      <p class="body-base text-muted">Explore our latest innovations and success stories</p>
+    </div>
+    <div class="grid-3 gap-6">
+      <article class="card card-sm project__card">
+        <img src="https://placehold.co/800x500/181824/818CF8?text=Project+Alpha" alt="Project Alpha" class="w-full rounded">
+        <div class="mt-4">
+          <h3 class="heading-4">Project Alpha</h3>
+          <p class="body-base mt-2">A next-gen platform for enterprise analytics</p>
+          <a href="/case-study-alpha" class="btn btn-sm btn-secondary mt-4">View Details</a>
+        </div>
+      </article>
+      <article class="card card-sm project__card">
+        <img src="https://placehold.co/800x500/181824/818CF8?text=Project+Beta" alt="Project Beta" class="w-full rounded">
+        <div class="mt-4">
+          <h3 class="heading-4">Project Beta</h3>
+          <p class="body-base mt-2">AI-driven customer insights dashboard</p>
+          <a href="/case-study-beta" class="btn btn-sm btn-secondary mt-4">View Details</a>
+        </div>
+      </article>
+      <article class="card card-sm project__card">
+        <img src="https://placehold.co/800x500/181824/818CF8?text=Project+Gamma" alt="Project Gamma" class="w-full rounded">
+        <div class="mt-4">
+          <h3 class="heading-4">Project Gamma</h3>
+          <p class="body-base mt-2">IoT solution for smart logistics</p>
+          <a href="/case-study-gamma" class="btn btn-sm btn-secondary mt-4">View Details</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Categories Section -->
+<section class="section-sm">
+  <div class="container">
+    <div class="section-header text-center mb-12">
+      <h2 class="heading-2">Work Categories</h2>
+      <p class="body-lg mt-2">Solutions tailored to industry needs</p>
+    </div>
+    <div class="grid-4 gap-6">
+      <div class="card card-glass p-6 text-center">
+        <i class="fa-solid fa-laptop-code fa-2x text-primary mb-4"></i>
+        <h3 class="heading-4">Web Development</h3>
+        <p class="body-base mt-2">Scalable, secure, and responsive platforms</p>
+      </div>
+      <div class="card card-glass p-6 text-center">
+        <i class="fa-solid fa-robot fa-2x text-primary mb-4"></i>
+        <h3 class="heading-4">AI & Automation</h3>
+        <p class="body-base mt-2">Intelligent systems that learn and adapt</p>
+      </div>
+      <div class="card card-glass p-6 text-center">
+        <i class="fa-solid fa-chart-line fa-2x text-primary mb-4"></i>
+        <h3 class="heading-4">Data Analytics</h3>
+        <p class="body-base mt-2">Turn data into actionable insights</p>
+      </div>
+      <div class="card card-glass p-6 text-center">
+        <i class="fa-solid fa-mobile-screen fa-2x text-primary mb-4"></i>
+        <h3 class="heading-4">Mobile Solutions</h3>
+        <p class="body-base mt-2">Engaging apps for any device</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section-sm">
+  <div class="container text-center">
+    <div class="card-glass p-8">
+      <h2 class="heading-2">Let's Build Something Great Together</h2>
+      <p class="body-lg mt-4">Ready to transform your ideas into impactful digital solutions?</p>
+      <div class="mt-6">
+        <a href="/contact" class="btn btn-primary">Start a Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
