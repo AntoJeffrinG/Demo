@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  .hero__title {
+    font-size: var(--font-size-1);
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .highlight-card__icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .metric__value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #818cf8;
+  }
+
+  .metric__label {
+    font-size: 0.875rem;
+    color: #94a3b8;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="section" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);">
+  <div class="container">
+    <div class="hero__title text-center">
+      <h1 class="heading-1 gradient-text">Key Highlights</h1>
+      <p class="body-lg mt-4">Celebrating our proudest achievements and milestones</p>
+      <div class="gap-4 mt-6">
+        <a href="/success-stories" class="btn btn-primary">Read Success Stories</a>
+        <a href="/all-highlights" class="btn btn-secondary">View All Highlights</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Achievements Section -->
+<section class="section-sm">
+  <div class="container">
+    <div class="section-header mb-8">
+      <h2 class="heading-2 text-center">Notable Achievements</h2>
+      <p class="body-base text-muted text-center">Milestones that define our journey</p>
+    </div>
+    <div class="grid-3 gap-6">
+      <article class="card card-sm glass">
+        <i class="highlight-card__icon fa-solid fa-trophy"></i>
+        <h3 class="heading-4 mb-2">Industry Recognition</h3>
+        <p class="body-base">Awarded Top Innovator in Tech for 2024 by Global Tech Review</p>
+      </article>
+      <article class="card card-sm glass">
+        <i class="highlight-card__icon fa-solid fa-users"></i>
+        <h3 class="heading-4 mb-2">Community Impact</h3>
+        <p class="body-base">Reached over 100,000 learners through free coding bootcamps</p>
+      </article>
+      <article class="card card-sm glass">
+        <i class="highlight-card__icon fa-solid fa-chart-line"></i>
+        <h3 class="heading-4 mb-2">Growth Metrics</h3>
+        <p class="body-base">Expanded to 12 countries with a 300% YoY user increase</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Metrics Section -->
+<section class="section-sm">
+  <div class="container">
+    <div class="section-header mb-8">
+      <h2 class="heading-2 text-center">Performance Overview</h2>
+      <p class="body-base text-muted text-center">By the numbers</p>
+    </div>
+    <div class="grid-4 gap-4">
+      <div class="text-center">
+        <div class="metric__value">98%</div>
+        <div class="metric__label">Client Retention</div>
+      </div>
+      <div class="text-center">
+        <div class="metric__value">150+</div>
+        <div class="metric__label">Projects Delivered</div>
+      </div>
+      <div class="text-center">
+        <div class="metric__value">24</div>
+        <div class="metric__label">Team Members</div>
+      </div>
+      <div class="text-center">
+        <div class="metric__value">12</div>
+        <div class="metric__label">Global Offices</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section-sm">
+  <div class="container text-center">
+    <div class="card card-glass p-8">
+      <h2 class="heading-3 mb-4">See What We've Accomplished</h2>
+      <p class="body-lg mb-6">Explore detailed case studies of our most impactful work</p>
+      <div class="gap-4 flex justify-center">
+        <a href="/success-stories" class="btn btn-primary btn-lg">Read Success Stories</a>
+        <a href="/all-highlights" class="btn btn-ghost btn-lg">View All Highlights</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
