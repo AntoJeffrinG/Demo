@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  .hero__title {
+    font-size: var(--font-size-1);
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .contact__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  .contact__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+</style>
+
+<section class="section" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);">
+  <div class="container">
+    <div class="hero__title text-center">
+      <h1 class="heading-1 gradient-text">Let's Connect</h1>
+      <p class="body-lg mt-4">Ready to start your next project? We're here to help.</p>
+      <div class="gap-4 mt-6">
+        <a href="#contact-form" class="btn btn-primary">Send Message</a>
+        <a href="#contact-info" class="btn btn-secondary">Schedule Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact-form" class="section-sm">
+  <div class="container">
+    <div class="contact-form">
+      <form class="card glass p-6">
+        <div class="flex flex-col gap-4">
+          <div>
+            <label class="label">Name</label>
+            <input type="text" class="w-full p-3 rounded bg-dark-800 text-white">
+          </div>
+          <div>
+            <label class="label">Email</label>
+            <input type="email" class="w-full p-3 rounded bg-dark-800 text-white">
+          </div>
+          <div>
+            <label class="label">Message</label>
+            <textarea rows="5" class="w-full p-3 rounded bg-dark-800 text-white"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="contact-info" class="section-sm">
+  <div class="container">
+    <div class="section-header text-center mb-8">
+      <h2 class="heading-2">Get in Touch</h2>
+      <p class="body-base text-muted">We're available for projects and collaborations</p>
+    </div>
+    <div class="contact__grid">
+      <div class="card card-sm">
+        <div class="contact__item">
+          <i class="fa-solid fa-envelope text-primary fa-2x"></i>
+          <div>
+            <h3 class="heading-4">Email</h3>
+            <p class="body-base">contact@example.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="card card-sm">
+        <div class="contact__item">
+          <i class="fa-solid fa-phone text-primary fa-2x"></i>
+          <div>
+            <h3 class="heading-4">Phone</h3>
+            <p class="body-base">+1 (555) 123-4567</p>
+          </div>
+        </div>
+      </div>
+      <div class="card card-sm">
+        <div class="contact__item">
+          <i class="fa-solid fa-location-dot text-primary fa-2x"></i>
+          <div>
+            <h3 class="heading-4">Location</h3>
+            <p class="body-base">San Francisco, CA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container text-center">
+    <h2 class="heading-2 mb-4">Let's Build Something Great Together</h2>
+    <p class="body-lg text-muted mb-6">We're ready to bring your vision to life with precision and creativity.</p>
+    <a href="/schedule" class="btn btn-primary btn-lg">Schedule a Call</a>
+  </div>
+</section>
+{% endblock %}
